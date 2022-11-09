@@ -38,7 +38,7 @@
         position: absolute;
         top: 45%;
         font-size: 35px;
-        animation-duration: 5s;
+        animation-duration: 20s;
       }
 
       .b1{
@@ -57,20 +57,21 @@
       }
 
       @keyframes b1 {
-        0% {left: 5%; top: 0px;}
-        50% {left: 5%; top: 45%;}
-        100% {left: 45%; top: 45%;}
+        0% {opacity: 0; left: 5%; top: 0px;}
+        70% {opacity: 0; left: 5%; top: 45%;}
+        100% {opacity: 1; left: 45%; top: 45%;}
       }
 
       @keyframes b2 {
-        0% {left: 47%; top: 0px;}
-        100% {left: 47%; top: 45%;}
+        0% {opacity: 0; left: 47%; top: 0px;}
+        70% {opacity: 0}
+        100% {opacity: 1; left: 47%; top: 45%;}
       }
 
       @keyframes b3 {
-        0% {left: 95%; top: 0%;}
-        50% {left: 95%; top: 45%;}
-        100% {left: 53%; top: 45%;}
+        0% {opacity: 0; left: 95%; top: 0%;}
+        70% {opacity: 0; left: 95%; top: 45%;}
+        100% {opacity: 1; left: 53%; top: 45%;}
       }
 
       .b4, .b5{
@@ -82,24 +83,70 @@
         bottom: 9%;
         left: 43%;
         animation-name: b4;
-        animation-duration: 14s;
+        animation-duration: 24s;
       }
       .b5{
+        display: none;
         bottom: 4%;
         left: 47%;
         animation-name: b5;
-        animation-duration: 18s;
+        animation-duration: 30s;
       }
       @keyframes b4 {
         0% {opacity: 0;}
-        46% {opacity: 0;}
+        60% {opacity: 0;}
         100% {opacity: 1;}
       }
       @keyframes b5 {
         0% {opacity: 0;}
-        52% {opacity: 0;}
+        80% {opacity: 0;}
         100% {opacity: 1;}
       }
+
+      .img3, .img5, .img6{
+        display: none;
+        
+      }
+      .img2, .img4, .img1{
+        height: 0px; width: 0px;
+        z-index: 1000;
+        position: absolute;
+      }
+      .img2{
+        left: 42%;
+        top: 40%;
+        animation-name: img2;
+        animation-duration: 8s;
+      }
+      @keyframes img2 {
+        0% {opacity: 0; height: 0px; width: 0px}
+        50% {opacity: 1; height: 100px; width: 120px;}
+        100% {opacity: 0; height: 0px; width: 0px}
+      }
+      .img4{
+        right: 42%;
+        top: 40%;
+        animation-name: img2;
+        animation-duration: 8s;
+      }
+      @keyframes img2 {
+        0% {opacity: 0; height: 0px; width: 0px}
+        50% {opacity: 1; height: 100px; width: 120px;}
+        100% {opacity: 0; height: 0px; width: 0px}
+      }
+      .img1{
+        right: 42%;
+        top: 39%;
+        animation-name: img1;
+        animation-duration: 16s;
+      }
+      @keyframes img1 {
+        0% {opacity: 0; height: 0px; width: 0px}
+        40% {opacity: 0; height: 0px; width: 0px}
+        70% {opacity: 1; height: 180px; width: 220px;}
+        100% {opacity: 0; height: 0px; width: 0px}
+      }
+
     </style>
   </head>
 
@@ -109,6 +156,12 @@
     <b class="b3">You</b>
     <b class="b4">This gift is for my love!</b>
     <b class="b5">Kiều Hậu</b>
+    <img src="1.png" class="img1" alt="Girl in a jacket">
+    <img src="2.png" class="img2" alt="Girl in a jacket">
+    <img src="3.png" class="img3" alt="Girl in a jacket">
+    <img src="4.png" class="img4" alt="Girl in a jacket">
+    <img src="5.png" class="img5" alt="Girl in a jacket">
+    <img src="6.png" class="img6" alt="Girl in a jacket">
     <canvas id="pinkboard"></canvas>
 
     <script>
